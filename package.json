@@ -4,7 +4,8 @@
   "description": "A one stop shop for all your pet needs in the KSA region",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server",
+    "server": "nodemon server.js"
   },
   "author": "NBK-01",
   "license": "ISC",
