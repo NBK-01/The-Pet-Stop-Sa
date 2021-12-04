@@ -5,7 +5,8 @@ const { Schema } = mongoose;
 const PostSchema = new Schema({
   postDate: {
     type: Date,
-    default: Date.now
+    default: Date.now,
+    get: (timestamp) => dateFormat(timestamp),
   },
   title: 
     {
@@ -16,7 +17,11 @@ const PostSchema = new Schema({
       type: String,
       required: true,
   },
-  
+  category: {
+    type: String,
+    required: true,
+  }
+
 });
 
 const Post = mongoose.model('post', PostSchema);
