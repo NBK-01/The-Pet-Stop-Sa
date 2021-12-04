@@ -5,8 +5,7 @@ const { Schema } = mongoose;
 const PostSchema = new Schema({
   postDate: {
     type: Date,
-    default: Date.now,
-    get: (timestamp) => dateFormat(timestamp),
+    default: Date.now
   },
   title: 
     {
