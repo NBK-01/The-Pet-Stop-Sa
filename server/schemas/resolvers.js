@@ -2,7 +2,7 @@ const { Post } = require('../models');
 
 const resolvers = {
   Query: {
-    posts: async () => {
+    post: async () => {
       return Post.find();
     },
 

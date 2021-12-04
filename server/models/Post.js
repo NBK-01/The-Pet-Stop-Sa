@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
 
-const { Schema } = mongoose;
+
+const { Schema, model } = require('mongoose');
 
 const PostSchema = new Schema({
   postDate: {
@@ -23,6 +23,6 @@ const PostSchema = new Schema({
 
 });
 
-const Post = mongoose.model('post', PostSchema);
+const Post = model('Post', PostSchema);
 
 module.exports = Post;
