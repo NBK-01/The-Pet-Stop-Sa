@@ -16,6 +16,7 @@ const PostSchema = new Schema({
       type: String,
       required: true,
   },
+  
 });
 
 const Post = mongoose.model('post', PostSchema);
