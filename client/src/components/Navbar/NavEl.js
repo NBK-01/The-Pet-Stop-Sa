@@ -30,7 +30,7 @@ height: 80px;
 z-index: 1;
 width: 100%;
 padding: 0 24px;
-max-width: 1550px;
+max-width: 1600px;
 
 `;
 
@@ -102,5 +102,14 @@ align-items: center;
 
 
 export const SignUpLink = styled(LinkR)`
-
+background: red;
+white-space: nowrap;
+padding: 10px 22px;
+color: white;
+font-size: 18px;
+outline: none;
+border: none;
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+text-decoration: none;
 `
