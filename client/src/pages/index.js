@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import NavBar from '../components/Navbar';
 
 
 
 const Home = () => {
         return (
-            <div>
+            <Router>
                 <NavBar/> 
-            </div>
+            </Router>
         )
     }
     
