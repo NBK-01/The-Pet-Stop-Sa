@@ -39,11 +39,13 @@ export const NavLogo = styled(LinkS)`
 color: #000;
 justify-self: flex-start;
 cursor: pointer; 
-font-size: 1.5rem;
+font-size: 30px;
 display: flex;
 align-items: center;
-font-weight: bold;
+font-weight: 800; 
 text-decoration: none;
+font-family: ManropeB;
+line-height: 82px;
 `;
 
 export const IconMobile = styled.div`
@@ -85,9 +87,11 @@ text-decoration: none;
 padding: 0 1rem;
 height: 100%;
 cursor: pointer;
+font-family: ManropeB;
+font-size: 14px;
 
 &.active{
-    border-bottom: 3px dashed red;
+    border-bottom: 3px solid #fb8500;
 }
 `;
 
@@ -102,14 +106,33 @@ align-items: center;
 
 
 export const SignUpLink = styled(LinkR)`
-background: red;
+background: #fb8500;
 white-space: nowrap;
 padding: 10px 22px;
-color: white;
-font-size: 18px;
+color: #fff;
+font-size: 14px;
 outline: none;
 border: none;
+border-radius: 5px;
 cursor: pointer;
-transition: all 0.2s ease-in-out;
+transition: all 0.5s ease-in-out;
 text-decoration: none;
+font-family: Manrope;
+font-weight: 400;
+line-height: 19px;
+`
+
+export const SignInLink = styled(LinkR)` 
+color: #000;
+font-size: 14px;
+outline: none;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: all 0.5s ease-in-out;
+text-decoration: none;
+font-family: Manrope;
+margin-right: 20px;
+font-weight: 400;
+line-height:19px;
 `
