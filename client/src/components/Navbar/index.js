@@ -14,12 +14,18 @@ const Navbar = ({toggle}) => {
                     </IconMobile>
                     <NavItems>
                         <Item>
-                            <NavLinks to="about"> About </NavLinks>
+                            <NavLinks to="about"> About us </NavLinks>
                         </Item>
                         <Item>
-                            <NavLinks to="portfolio"> Portfolio </NavLinks>
+                            <NavLinks to="portfolio"> Find your pet </NavLinks>
+                        </Item>
+                        <Item>
+                            <NavLinks to="portfolio"> Sign-in </NavLinks>
                         </Item>
                     </NavItems>
+                    <NavBtn>
+                        <SignUpLink> Sign Up </SignUpLink>
+                    </NavBtn>
                 </NavbarWrapper>
             </Nav>
         </>
