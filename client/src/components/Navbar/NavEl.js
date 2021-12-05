@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { Link } from 'react-scroll'
-
+import { Link as LinkS} from 'react-scroll'
+import {Link as LinkR} from 'react-router-dom'
 
 
 export const Nav = styled.nav `
@@ -35,7 +35,7 @@ max-width: 1550px;
 `;
 
 
-export const NavLogo = styled(Link)`
+export const NavLogo = styled(LinkS)`
 color: #000;
 justify-self: flex-start;
 cursor: pointer; 
@@ -77,7 +77,7 @@ export const Item = styled.li`
 height: 80px;
 `
 
-export const NavLinks = styled(Link)`
+export const NavLinks = styled(LinkS)`
 color: #000;
 display: flex;
 align-items: center;
@@ -90,3 +90,17 @@ cursor: pointer;
     border-bottom: 3px dashed red;
 }
 `;
+
+export const NavBtn = styled.nav`
+display: flex;
+align-items: center;
+
+@media screen and (max-width:768px){
+    display: none;
+}
+`
+
+
+export const SignUpLink = styled(LinkR)`
+
+`
