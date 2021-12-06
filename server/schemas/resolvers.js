@@ -26,12 +26,59 @@ const resolvers = {
   },
 
   Mutation: {
-    
-    addPost: async (parent, { title, description, category }) => {
-      return Post.create({title, description, category});
+    addUser: async (parent, { username, email, password }) => {
+      const user = await User.create({ username, email, password });
+      const token = signToken(user);
+      return { token, user };
     },
-    removePost: async (parent, { postId }) => {
-      return Post.findOneAndDelete({ _id: postId });
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
+
+      if (!user) {
+        throw new AuthenticationError('No user found with this email address');
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect credentials');
+      }
+
+      const token = signToken(user);
+
+      return { token, user };
+    },
+    addPost: async (parent, { title, description }, context) => {
+      if (context.user) {
+        const post = await post.create({
+          title, description,
+          postAuthor: context.user.username,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { posts: post._id } }
+        );
+
+        return post;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    removePost: async (parent, { postId }, context) => {
+      if (context.user) {
+        const post = await Post.findOneAndDelete({
+          _id: postId,
+          postAuthor: context.user.username,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { post: post._id } }
+        );
+
+        return post;
+      }
+      throw new AuthenticationError('You need to be logged in!');
     },
   },
 };
