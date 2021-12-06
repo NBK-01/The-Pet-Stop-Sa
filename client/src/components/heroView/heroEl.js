@@ -132,7 +132,7 @@ display: flex;
 position: absolute;
 left: 85%;
 top: -4%;
-background: #219ebc;
+background: #219EBC;
 filter: blur(100px);
 border-radius: 10px;
 transform: rotate(-170.77deg);
