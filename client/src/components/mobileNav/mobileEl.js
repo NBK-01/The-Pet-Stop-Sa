@@ -8,7 +8,7 @@ position:fixed;
 z-index: 999;
 width: 100%;
 height: 100%;
-background: #000;
+background: #fb8500;
 display: grid;
 align-items: center;
 top: 0;
@@ -58,11 +58,13 @@ justify-content: center;
 font-size: 1.5rem;
 text-decoration: none;
 list-style: none;
+font-family: ManropeB;
 transition: 0.3s ease-in-out;
 color: #fff;
 margin-bottom: 50px;
+cursor: pointer;
 &:hover{
-    color: red;
+    transform: scale(1.1);
     transition: 0.3s ease-in-out;
 }
 `
