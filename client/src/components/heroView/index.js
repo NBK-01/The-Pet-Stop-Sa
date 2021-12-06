@@ -1,21 +1,23 @@
 import React from 'react'
-import {AboutContainer, AboutWrapper, AboutRow, ColumnOne, ColumnTwo, TextWrapper, TopLine, Heading, Subtitle, ImgWrapper, Img} from './heroEl'
+import {AboutContainer, AboutWrapper, AboutRow, ColumnOne, ColumnTwo, TextWrapper, TopLine, Heading, Subtitle, ImgWrapper, Img, BlurEl, BlurElTwo} from './heroEl'
 
-const AboutView = ({lightBg, id, imgStart, topLine, lightText, headline, darkText, description, img, alt}) => {
+const AboutView = ({id, imgStart, topLine, headline, description, alt}) => {
     return (
-        <AboutContainer lightBg={lightBg} id={id}>
+        <AboutContainer id={id}>
             <AboutWrapper imgStart={imgStart}>
                 <AboutRow>
+                <BlurEl/>
+                <BlurElTwo/>
                     <ColumnOne>
                     <TextWrapper>
                         <TopLine> {topLine} </TopLine>
-                        <Heading lightText={lightText}> {headline} </Heading>
-                        <Subtitle darkText={darkText}> {description} </Subtitle>
+                        <Heading> {headline} </Heading>
+                        <Subtitle> {description} </Subtitle>
                     </TextWrapper>
                     </ColumnOne>
                     <ColumnTwo>
                         <ImgWrapper>
-                            <Img src={img} alt={alt}/>
+                            <Img src={require('../../images/Saly.svg').default} alt={alt}/>
                         </ImgWrapper>
                     </ColumnTwo>
                 </AboutRow>
