@@ -1,17 +1,20 @@
 import React from 'react'
-import {AboutContainer, AboutWrapper, AboutRow, ColumnOne, ColumnTwo, TextWrapper, Heading, Subtitle, ImgWrapper, Img, BlurEl, BlurElTwo} from './heroEl'
+import {AboutContainer, AboutWrapper, AboutRow, ColumnOne, ColumnTwo, TextWrapper, Heading, Subtitle, ImgWrapper, Img, BlurEl, BlurElTwo, BlurElThree, TextField, SubBtn} from './heroEl'
 
-const AboutView = ({id, imgStart, topLine, headline, description, alt}) => {
+const AboutView = ({id, imgStart, headline, description, alt}) => {
     return (
         <AboutContainer id={id}>
             <AboutWrapper imgStart={imgStart}>
                 <AboutRow>
                 <BlurEl/>
                 <BlurElTwo/>
+                <BlurElThree/>
                     <ColumnOne>
                     <TextWrapper>
                         <Heading> {headline} </Heading>
                         <Subtitle> {description} </Subtitle>
+                        <TextField/>
+                        <SubBtn>Subscribe</SubBtn>
                     </TextWrapper>
                     </ColumnOne>
                     <ColumnTwo>
