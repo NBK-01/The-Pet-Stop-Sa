@@ -107,7 +107,7 @@ left: 50%;
 background: #FB8500;
 filter: blur(200px);
 border-radius: 10px;
-transform: rotate(-170.77deg)
+transform: rotate(-170.77deg);
 `
 
 export const BlurElTwo = styled.div`
@@ -121,5 +121,52 @@ top: 35%;
 background: #219EBC;
 filter: blur(75px);
 border-radius: 10px;
-transform: rotate(-170.77deg)
+transform: rotate(-170.77deg);
+`
+
+export const BlurElThree = styled.div`
+width: 180px;
+height: 180px;
+z-index: -10;
+display: flex;
+position: absolute;
+left: 85%;
+top: -4%;
+background: #219ebc;
+filter: blur(100px);
+border-radius: 10px;
+transform: rotate(-170.77deg);
+`
+
+
+export const TextField = styled.textarea`
+width: 530px;
+height: 70px;
+border: none;
+background: #FFFFFF;
+box-shadow: 20px 10px 100px rgba(0, 0, 0, 0.1);
+border-radius: 5px;
+resize: none;
+font-size: 20px;
+`
+
+export const SubBtn = styled.button`
+background: #fb8500;
+white-space: nowrap;
+padding: 10px 22px;
+color: #fff;
+font-size: 16px;
+height: 50px;
+outline: none;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: all 0.5s ease-in-out;
+text-decoration: none;
+font-family: ManropeB;
+font-weight: 400;
+line-height: 19px;
+position: absolute;
+left: 30%;
+top: 600px;
 `
