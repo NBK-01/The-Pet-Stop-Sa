@@ -35,40 +35,33 @@ grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`
 
 export const ColumnOne = styled.div`
 margin-bottom: 15px;
-margin-right: 130px;
+margin-right: 60px;
 padding: 0 15px;
 grid-area: col1;
 `
 
 export const ColumnTwo = styled.div`
 margin-bottom: 15px;
-margin-left: 100px;
+margin-left: 55px;
 padding: 0 15px;
 grid-area: col2;
 `
 
 export const TextWrapper = styled.div`
-max-width: 540px;
+max-width: 650px;
 padding-top: 0;
 padding-bottom: 60px;
 `
 
-export const TopLine = styled.p`
-color: #01bf71;
-font-size: 16px;
-line-height: 16px;
-font-weight: 700;
-letter-spacing: 1.4px;
-text-transform: uppercase;
-margin-bottom: 16px;
-`
 
 export const Heading = styled.h1`
 margin-bottom: 24px;
-font-size: 48px;
-line-height: 1.1;
-font-weight: 600;
-color: #000;
+font-weight: 800;
+font-size: 60px;
+line-height: 82px;
+font-family: ManropeB;
+text-transform: lowercase;
+color: black;
 
 @media screen and (max-width:480px){
     font-size: 30px;
@@ -79,9 +72,17 @@ color: #000;
 export const Subtitle = styled.p`
 max-width: 440px;
 margin-bottom: 35px;
-font-size: 18px;
-line-height: 24px;
-color: #000;
+font-family: Manrope;
+font-style: normal;
+font-weight: 600;
+font-size: 23px;
+line-height: 32px;
+
+text-transform: lowercase;
+
+color: #000000;
+
+opacity: 0.8;
 `
 
 export const ImgWrapper = styled.div`
@@ -97,14 +98,14 @@ padding-right: 0;
 `
 
 export const BlurEl = styled.div`
-width: 200px;
-height: 200px;
+width: 250px;
+height: 250px;
 z-index: -10;
 display: flex;
 position: absolute;
-left: 40%;
+left: 50%;
 background: #FB8500;
-filter: blur(100px);
+filter: blur(200px);
 border-radius: 10px;
 transform: rotate(-170.77deg)
 `
@@ -115,10 +116,10 @@ height: 180px;
 z-index: -10;
 display: flex;
 position: absolute;
-left: 51%;
+left: 60%;
 top: 35%;
 background: #219EBC;
-filter: blur(100px);
+filter: blur(75px);
 border-radius: 10px;
 transform: rotate(-170.77deg)
 `

@@ -1,5 +1,5 @@
 import React from 'react'
-import {AboutContainer, AboutWrapper, AboutRow, ColumnOne, ColumnTwo, TextWrapper, TopLine, Heading, Subtitle, ImgWrapper, Img, BlurEl, BlurElTwo} from './heroEl'
+import {AboutContainer, AboutWrapper, AboutRow, ColumnOne, ColumnTwo, TextWrapper, Heading, Subtitle, ImgWrapper, Img, BlurEl, BlurElTwo} from './heroEl'
 
 const AboutView = ({id, imgStart, topLine, headline, description, alt}) => {
     return (
@@ -10,7 +10,6 @@ const AboutView = ({id, imgStart, topLine, headline, description, alt}) => {
                 <BlurElTwo/>
                     <ColumnOne>
                     <TextWrapper>
-                        <TopLine> {topLine} </TopLine>
                         <Heading> {headline} </Heading>
                         <Subtitle> {description} </Subtitle>
                     </TextWrapper>
