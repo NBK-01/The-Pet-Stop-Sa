@@ -1,21 +1,21 @@
 import React from 'react'
 import {AboutContainer, AboutWrapper, AboutRow, ColumnOne, ColumnTwo, TextWrapper, TopLine, Heading, Subtitle, ImgWrapper, Img} from './heroEl'
 
-const AboutView = () => {
+const AboutView = ({lightBg, id, imgStart, topLine, lightText, headline, darkText, description, img, alt}) => {
     return (
-        <AboutContainer  >
-            <AboutWrapper>
+        <AboutContainer lightBg={lightBg} id={id}>
+            <AboutWrapper imgStart={imgStart}>
                 <AboutRow>
                     <ColumnOne>
                     <TextWrapper>
-                        <TopLine> HELLO </TopLine>
-                        <Heading > HEADLINE TINGS </Heading>
-                        <Subtitle > DESC lorem ipsum dolor sit am</Subtitle>
+                        <TopLine> {topLine} </TopLine>
+                        <Heading lightText={lightText}> {headline} </Heading>
+                        <Subtitle darkText={darkText}> {description} </Subtitle>
                     </TextWrapper>
                     </ColumnOne>
                     <ColumnTwo>
                         <ImgWrapper>
-                            <Img src="../../assets/Saly.png"/>
+                            <Img src={img} alt={alt}/>
                         </ImgWrapper>
                     </ColumnTwo>
                 </AboutRow>

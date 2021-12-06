@@ -3,10 +3,12 @@ export const aboutObjOne = {
     lightBg: false,
     lightText: true,
     lightTextDesc: true,
-    topLine: 'LEarningf djfs', 
-    headline: 'LEarning never stops',
+    topLine: 'NO CLUE', 
+    headline: 'HEADLINE TINGS',
     description: 'BLah blah blahblahblahb  blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah',
     imgStart: false,
-    img: require('../../assets/mobile.svg'),
+    img: require('../../images/mobile.svg'),
     alt: 'reading book' 
     }
+
+
