@@ -17,6 +17,13 @@ type Post {
    title: String
    description: String
    category: String
+   postAuthor: String
+   postDate: Date
+}
+
+type Auth{
+   token: ID!
+   user: User
 }
 
 type Query{
