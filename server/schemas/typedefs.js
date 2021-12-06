@@ -27,16 +27,25 @@ type Auth{
 }
 
 type Query{
-   Posts: [Post]!
-   post(postId: ID!): Post
+    users: [User]
+    user(username: String!): User
+    posts(username: String): [Post]
+    post(thoughtId: ID!): Post
+    me: User
 }
 
 
 type Mutation {
-   addPost(title: String!, description: String!, category: String!): Post  
-   removePost(postId: ID!): Post
+   addUser(username: String!, email: String!, password: String!): Auth
+
+    login(email: String!, password: String!): Auth
+
+    addPost(title: String!, description: String!): Post
+    
+    removePost(postId: ID!): Post
+   
 }
 
-`
+`;
 
 module.exports = typeDefs;
