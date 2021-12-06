@@ -7,6 +7,11 @@ const PostSchema = new Schema({
     type: Date,
     default: Date.now
   },
+  postAuthor: {
+    type: String,
+    required: true,
+    trim: true,
+  },
   title: 
     {
       type: String,
