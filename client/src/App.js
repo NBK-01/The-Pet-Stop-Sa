@@ -1,15 +1,50 @@
 import React from 'react';
-import './App.css';
-import Home from '../src/pages/index'
 import GlobalFonts from './fonts/fonts';
-import { BrowserRouter as Router } from 'react-router-dom';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
+
+import { setContext } from '@apollo/client/link/context';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+
+
+import Home from '../src/pages/index'
+
+
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+
+
+const authLink = setContext((_, { headers }) => {
+
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
+
 
 function App() {
   return (
-    <Router>
+    <ApolloProvider client={client}>
       <GlobalFonts/>
-      <Home/>
-    </Router>
+      <Router>
+        <Route exact path="/"> <Home/> </Route>
+      </Router>
+    </ApolloProvider>
   );
 }
 
