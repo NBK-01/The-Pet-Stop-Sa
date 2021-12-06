@@ -1,11 +1,15 @@
 
-
 const { Schema, model } = require('mongoose');
+const dateFormat = require('../utils/dateFormat')
+
+
+
 
 const PostSchema = new Schema({
   postDate: {
     type: Date,
-    default: Date.now
+    default: Date.now,
+    get: (timestamp) => dateFormat(timestamp)
   },
   postAuthor: {
     type: String,
