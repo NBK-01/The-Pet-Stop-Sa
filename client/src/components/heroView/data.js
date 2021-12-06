@@ -7,7 +7,7 @@ export const aboutObjOne = {
     headline: 'HEADLINE TINGS',
     description: 'BLah blah blahblahblahb  blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah',
     imgStart: false,
-    img: require('../../images/mobile.svg'),
+    // img: require('../../images/mobile.svg'),
     alt: 'reading book' 
     }
 
