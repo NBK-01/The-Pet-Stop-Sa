@@ -1,13 +1,29 @@
 import React from 'react'
-import {ColumnTwo, BlurElTwo, BlurEl, Img} from '../SignUp/signupEl'
+import {ColumnOne, BlurElTwo, BlurEl, Img, ColumnTwo, MainContainer, SignUpHeading, Input, BtnWrapper, FormContainer, PetStop, SignUpBtn} from '../SignUp/signupEl'
 
 const Signin = () => {
     return (
         <>
-            <ColumnTwo> 
+            <ColumnOne> 
                     <BlurEl/>
                     <BlurElTwo/>
-                    <Img src={require('../../images/signin.svg').default}/>
+                    <Img src={require('../../images/signup.svg').default}/>
+           </ColumnOne>
+
+           <ColumnTwo>
+            <MainContainer>
+                <SignUpHeading> Welcome back to <PetStop> the pet stop </PetStop> </SignUpHeading>
+                <FormContainer>
+                    <Input/>
+                    <Input/>
+                    <Input/>
+                    <BtnWrapper>
+                    <SignUpBtn> Sign-In </SignUpBtn>
+                </BtnWrapper>
+                </FormContainer>
+
+            </MainContainer>
+                
            </ColumnTwo>
         </>
     )
