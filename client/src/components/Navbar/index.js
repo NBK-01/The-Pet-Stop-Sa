@@ -27,7 +27,10 @@ const Navbar = ({toggle}) => {
                     </NavItems>
                     <NavBtn>
                         {Auth.loggedIn() ? (
-                            <SignUpLink onClick={logout}> Logout </SignUpLink>
+                            <>
+                            <SignInLink onClick={logout}> Logout </SignInLink>
+                            <SignUpLink> Post a Listing </SignUpLink>
+                            </>
                         ) : (
                             <>
                         <SignInLink to='/signin'> Sign In </SignInLink>

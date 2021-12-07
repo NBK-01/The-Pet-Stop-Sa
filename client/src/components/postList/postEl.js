@@ -8,7 +8,23 @@ display: flex;
 align-items: center;
 justify-content: center;
 overflow: hidden;
+margin-top: 10%;
+`
 
+export const PostPageIntro = styled.h1`
+font-family: ManropeB;
+font-style: normal;
+font-weight: 800;
+font-size: 40px;
+line-height: 82px;
+/* or 137% */
+text-align: center;
+text-transform: lowercase;
+color: #000000;
+position: absolute;
+left: 0;
+right: 0;
+margin-top: 7%;
 `
 
 export const PostContainer = styled.div`
