@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {ColumnOne, BlurElTwo, BlurEl, Img, ColumnTwo, MainContainer, SignUpHeading, Input, BtnWrapper, FormContainer, PetStop, SignUpBtn} from '../SignUp/signupEl'
+import {ColumnOne, BlurElTwo, BlurEl, Img, ColumnTwo, MainContainer, SignUpHeading, Input, BtnWrapper, FormContainer, PetStop, SignUpBtn, ErrorMessage} from '../SignUp/signupEl'
 
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
@@ -61,18 +61,27 @@ const Signin = (props) => {
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-                <FormContainer>
+                <FormContainer onSubmit={handleFormSubmit}>
                     <Input placeholder="Your email"
                   name="email"
                   type="email"
                   value={formState.email}
                   onChange={handleChange}/>
-                    <Input/>
+                    <Input
+                    placeholder="******"
+                    name="password"
+                    type="password"
+                    value={formState.password}
+                    onChange={handleChange}
+                    />
                     <BtnWrapper>
-                    <SignUpBtn> Sign-In </SignUpBtn>
+                    <SignUpBtn type="submit"> Sign-In </SignUpBtn>
                 </BtnWrapper>
                 </FormContainer>
             )}
+             {error && (
+                <ErrorMessage> {error.message}</ErrorMessage>
+            )}    
             </MainContainer>
                 
            </ColumnTwo>
