@@ -4,7 +4,7 @@ import NavBar from '../components/Navbar';
 import About from '../components/heroView';
 import MobileNav from '../components/mobileNav'
 import {aboutObjOne} from '../components/heroView/data'
-
+import Posts from '../components/postList'
 
 
 const Home = () => {
@@ -20,6 +20,7 @@ const Home = () => {
     <NavBar toggle={toggle}/>
 
     <About {...aboutObjOne}/>
+    <Posts/>
         </>
     )
 }
