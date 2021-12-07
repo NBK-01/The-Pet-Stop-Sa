@@ -35,7 +35,7 @@ max-width: 1600px;
 `;
 
 
-export const NavLogo = styled(LinkS)`
+export const NavLogo = styled(LinkR)`
 color: #000;
 justify-self: flex-start;
 cursor: pointer; 

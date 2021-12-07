@@ -18,7 +18,6 @@ type Post {
    description: String
    category: String
    postAuthor: String
-   postDate: Date
 }
 
 type Auth{
@@ -40,7 +39,7 @@ type Mutation {
 
     login(email: String!, password: String!): Auth
 
-    addPost(title: String!, description: String!): Post
+    addPost(title: String!, description: String!, category: String!): Post
     
     removePost(postId: ID!): Post
    

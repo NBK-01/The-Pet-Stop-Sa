@@ -22,7 +22,7 @@ const Navbar = ({toggle}) => {
                     </NavItems>
                     <NavBtn>
                         <SignInLink to='/'> Sign In </SignInLink>
-                        <SignUpLink to='/'> Sign Up </SignUpLink>
+                        <SignUpLink to='/signup'> Sign Up </SignUpLink>
                     </NavBtn>
                 </NavbarWrapper>
             </Nav>
@@ -31,3 +31,4 @@ const Navbar = ({toggle}) => {
 }
 
 export default Navbar
+
