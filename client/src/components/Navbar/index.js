@@ -2,8 +2,13 @@ import React from 'react'
 import {FaBars} from 'react-icons/fa';
 import {Nav, NavbarWrapper, NavLogo, IconMobile, NavItems, Item, NavLinks, NavBtn, SignUpLink, SignInLink} from './NavEl';
 
+import Auth from '../../utils/auth';
 
 const Navbar = ({toggle}) => {
+    const logout = (event) => {
+        event.preventDefault();
+        Auth.logout();
+    }
     return (
         <>
             <Nav> 
@@ -21,8 +26,14 @@ const Navbar = ({toggle}) => {
                         </Item>
                     </NavItems>
                     <NavBtn>
+                        {Auth.loggedIn() ? (
+                            <SignUpLink onClick={logout}> Logout </SignUpLink>
+                        ) : (
+                            <>
                         <SignInLink to='/signin'> Sign In </SignInLink>
                         <SignUpLink to='/signup'> Sign Up </SignUpLink>
+                        </>
+                        )}
                     </NavBtn>
                 </NavbarWrapper>
             </Nav>
