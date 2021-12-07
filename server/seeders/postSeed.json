@@ -1,17 +1,20 @@
 [
     {
       "title": "Dog for adoption!",
-      "description": "lorem ipsum dolor sit amet",
-      "category": "Dog"
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,",
+      "category": "Adoption",
+      "postAuthor": "Jerry Seinfeld"
     },
     {
-        "title": "Dog for adoption!",
-        "description": "lorem ipsum dolor sit amet",
-        "category": "Dog"
+        "title": "Kittens for adoption!",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis",
+        "category": "Adoption",
+        "postAuthor":"Homer Simpson"
     },
     {
-        "title": "Dog for adoption!",
-        "description": "lorem ipsum dolor sit amet",
-        "category": "Dog"
+        "title": "Dog for Sale",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis",
+        "category": "Breeder/Sale" ,  
+        "postAuthor": "RandomUser111"                
     }
 ]
