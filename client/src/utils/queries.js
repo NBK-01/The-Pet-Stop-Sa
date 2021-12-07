@@ -43,20 +43,20 @@ export const QUERY_SINGLE_Post = gql`
   }
 `;
 
-export const QUERY_ME = gql`
-  query me {
-    me {
-      _id
-      username
-      email
-      posts {
-        _id
-        title
-        postAuthor
-        postDate
-        description
-        category
-      }
-    }
-  }
-`;
+// export const QUERY_ME = gql`
+//   query me {
+//     me {
+//       _id
+//       username
+//       email
+//       posts {
+//         _id
+//         title
+//         postAuthor
+//         postDate
+//         description
+//         category
+//       }
+//     }
+//   }
+// `;

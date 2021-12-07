@@ -36,3 +36,26 @@ background: rgba(255, 255, 255, 0.15);
     font-size: 1rem;
   } */
 `;
+
+
+export const DescInput = styled.input`
+background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.14);
+  border-radius: 5px;
+  width: 50%;
+  height: 5.5rem;
+  resize: none;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 75px;
+  font-family: ManropeB;
+  color: black;
+  &:focus {
+    display: inline-block;
+    transform: scale(1.1);
+    border-radius: 7px;
+  }
+`
