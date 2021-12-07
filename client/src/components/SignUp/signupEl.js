@@ -137,7 +137,7 @@ display: flex;
 flex-direction: column;
 justify-content: space-around;
 align-items: center;
-height: 40%;
+height: 70%;
 width: 100%;
 `
 
@@ -193,4 +193,14 @@ export const SignUpBtn = styled.button`
   line-height: 19px;
 `;
 
-
+export const ErrorMessage = styled.div` 
+width: 60px;
+height: 30px;
+border: 1px solid #fb8500;
+font-size: 15px;
+border-radius: 5px;
+cursor: pointer;
+font-family: Manrope;
+font-weight: 400;
+line-height: 19px;
+`

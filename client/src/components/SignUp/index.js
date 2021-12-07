@@ -10,7 +10,7 @@ import Auth from '../../utils/auth'
 
 import {ColumnOne, ColumnTwo, Img} from './signupEl'
 import { BlurEl, BlurElTwo } from './signupEl'
-import { MainContainer, SignUpHeading, PetStop, FormContainer, Input, BtnWrapper, SignUpBtn}from './signupEl'
+import { MainContainer, SignUpHeading, PetStop, FormContainer, Input, BtnWrapper, SignUpBtn, ErrorMessage}from './signupEl'
 
 
 const SignUp = () => {
@@ -47,20 +47,47 @@ const SignUp = () => {
 
 
     return (
-           <>
-
+        
+<>
            <ColumnOne>
             <MainContainer>
                 <SignUpHeading> sign up to <PetStop> the pet stop </PetStop> </SignUpHeading>
-                <FormContainer>
-                    <Input/>
-                    <Input/>
-                    <Input/>
-                </FormContainer>
-                <BtnWrapper>
-                    <SignUpBtn> Sign-Up </SignUpBtn>
+
+
+                {data ? ( <p> Success! <Link to="/"> back to homepage </Link> </p> ) : (
+                <FormContainer onSubmit={handleFormSubmit}>
+                    <Input 
+                    placeholder="Username" 
+                    name="username"
+                    type="text" 
+                    value={formState.name}
+                    onChange={handleChange}
+                    />
+                    <Input
+                    placeholder="E-mail"
+                    name="email"
+                    type="email"
+                    value={formState.email}
+                    onChange={handleChange}
+                    />
+                    <Input
+                    placeholder="*********"
+                    name="password"
+                    type="password"
+                    value={formState.password}
+                    onChange={handleChange}
+                    />
+                    <BtnWrapper>
+                    <SignUpBtn type="submit"> Sign-Up </SignUpBtn>
                 </BtnWrapper>
+                </FormContainer>
+                )}
+            {error && (
+                <ErrorMessage> {error.message}</ErrorMessage>
+            )}    
+
             </MainContainer>
+                
            </ColumnOne>
 
            <ColumnTwo> 
