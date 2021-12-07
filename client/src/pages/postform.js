@@ -1,11 +1,10 @@
 import React from 'react';
-import Signin from '../components/SignIn'
+import Postform from '../components/postForm'
+
 
 const PostForm = () => {
     return(
-        <>
-        <Signin />
-        </>
+        <Postform/>
     )
 }
 
