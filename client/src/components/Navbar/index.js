@@ -29,7 +29,7 @@ const Navbar = ({toggle}) => {
                         {Auth.loggedIn() ? (
                             <>
                             <SignInLink onClick={logout}> Logout </SignInLink>
-                            <SignUpLink> Post a Listing </SignUpLink>
+                            <SignUpLink to="/postform"> Post a Listing </SignUpLink>
                             </>
                         ) : (
                             <>

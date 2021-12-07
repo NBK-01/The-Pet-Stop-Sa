@@ -3,23 +3,38 @@ import { Link } from 'react-router-dom'
 import {PostPage, PostPageIntro, PostContainer, PostImg, Img, PostCategory, PostAuthor, PostTitle, PostDescription} from './postEl'
 
 
-const Posts = () => {
+const Posts = ({
+    posts,
+    title,
+    showTitle = true,
+    showUsername = true,
+}) => {
+    if (!posts) {
+        return <PostPageIntro> No Listing available</PostPageIntro>
+    }
     return (
         <>
+       
         <PostPageIntro> One step away from finding your pet 🐶 </PostPageIntro>
         <PostPage>
-           <PostContainer> 
-                <PostImg>
-                    <Img src={require('../../images/dog.jpg').default}/>    
-                </PostImg> 
-                <div>
-                    <PostCategory> Adoption </PostCategory>
-                    <PostAuthor> Posted by:Nayef Kanaan</PostAuthor>
-                    <PostTitle> hello </PostTitle>
-                    <PostDescription> lorem ipsum dolor sit amet, lorem ipsum dolor sit amet</PostDescription>
-                </div>   
-           </PostContainer> 
-            
+                {showTitle && <h3>{title}</h3>}
+                {posts && posts.map((post) => (
+                    <PostContainer key={post.id}> 
+                    <PostImg>
+                        <Img src={require('../../images/dog.jpg').default}/>    
+                    </PostImg> 
+                    <div>
+                        {showUsername ? (
+                            <PostAuthor> Posted by: {post.postAuthor}</PostAuthor>
+                        ) : (
+                            <PostAuthor> Posted by: You</PostAuthor>
+                        )}
+                        <PostCategory> {post.category} </PostCategory>
+                        <PostTitle> {post.title} </PostTitle>
+                        <PostDescription> {post.description}</PostDescription>
+                    </div>   
+               </PostContainer> 
+                ))}    
         </PostPage>
         </>
     )

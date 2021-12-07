@@ -15,6 +15,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from '../src/pages/index'
 import SignUp from '../src/pages/signup'
 import SignIn from '../src/pages/signin'
+import PostForm from '../src/pages/postform'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -50,6 +51,9 @@ function App() {
       </Router>
       <Router>
         <Route exact path="/signin"> <SignIn/> </Route>
+      </Router>
+      <Router>
+        <Route exact path="/postform"> <PostForm/> </Route>
       </Router>
     </ApolloProvider>
   );

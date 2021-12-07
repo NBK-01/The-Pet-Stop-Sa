@@ -24,7 +24,7 @@ color: #000000;
 position: absolute;
 left: 0;
 right: 0;
-margin-top: 7%;
+margin-top: 15%;
 `
 
 export const PostContainer = styled.div`
