@@ -1,6 +1,4 @@
-import React, {useState} from 'react';
-import NavBar from '../components/Navbar';
-import About from '../components/heroView';
+import React from 'react';
 import Signup from '../components/SignUp'
 
 const SignUp = () => {
