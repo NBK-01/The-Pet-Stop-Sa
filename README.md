@@ -1,4 +1,4 @@
-# ThePetStop
+# ThePetStop (MVP-Stage)
 [![License: GPL v3](https://img.shields.io/badge/License-MIT-orange)](https://www.gnu.org/licenses/gpl-3.0)
 # Table of Contents
 1. [Description](#description)
