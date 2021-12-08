@@ -4,7 +4,7 @@
 1. [Description](#description)
 2. [Installation Guide](#install)
 3. [Usage Guide](#usage)
-4. [Testing Guide](#test)
+4. [ScreenShots](#pic)
 5. [Contributions](#contribution)
 6. [License](#license)
 7. [Questions](#questions)
@@ -14,7 +14,10 @@ A platform built with React to support and help pet lovers to find the right pla
 - git clone "repo" - npm run install - npm run develop
 ## Usage Guide <a name="usage"></a>
 Follow Install reqs
-## Testing Guide <a name="test"></a>
+## Screenshots <a name="pic"></a>
+
+![petstophome](https://user-images.githubusercontent.com/73779089/145135881-28483206-5841-460e-a4fc-7f2a6a7d597c.png)
+
 
 ## Contributions <a name="contribution"></a>
 Contact me for more info
